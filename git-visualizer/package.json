@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "description": "A git working Tree Visualizer",
-  "main": "main.js",
+  "main": "src/main.cjs",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:3000 && electron .\"",
     "build": "vite build && electron-builder",
     "lint": "eslint .",
     "electron": "electron ."
@@ -25,7 +25,6 @@
     "concurrently": "^9.2.1",
     "electron": "^41.7.1",
     "electron-builder": "^26.8.1",
-    "concurrently": "^8.0.0",
     "eslint": "^10.3.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
@@ -38,8 +37,8 @@
     "productName": "Git Visualizer",
     "files": [
       "dist/**/*",
-      "main.js",
-      "preload.js"
+      "src/main.cjs",
+      "src/preload.cjs"
     ],
     "directories": {
       "directories": {
