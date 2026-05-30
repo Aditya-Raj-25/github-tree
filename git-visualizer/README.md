@@ -4,7 +4,7 @@ An interactive desktop application built using **Electron**, **React**, and **D3
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 This application is built on top of a modern desktop web stack:
 
@@ -17,20 +17,20 @@ This application is built on top of a modern desktop web stack:
 
 ---
 
-## 📂 Project Architecture & Documents
+##  Project Architecture & Documents
 
 Here is a breakdown of the key files and documents in this workspace and how they fit together:
 
-### ⚙️ Configuration Files
+### Configuration Files
 *   [`package.json`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/package.json): Defines the metadata (name, version, scripts) and installs dependencies. It also specifies `src/main.js` as the Electron entry point and includes build targets for `electron-builder`.
 *   [`vite.config.js`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/vite.config.js): Customizes Vite parameters, integrates the React plugin, sets the relative asset path (`./`), and forces the dev server to run on port `3000`.
 *   [`eslint.config.js`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/eslint.config.js): Houses the ESLint rules to keep code style consistent and clean.
 
-### 🖥️ Electron (Main Process)
+###  Electron (Main Process)
 *   [`src/main.js`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/src/main.js): Runs inside Node.js. It manages the app lifecycle, opens the Chromium desktop window, and runs system-level operations (like calling the shell's `git` CLI) through secure Inter-Process Communication (IPC) handlers.
 *   [`src/preload.js`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/src/preload.js): Acts as a secure gateway (`contextBridge`) between Node.js and Chromium. It exposes a safe API to the React frontend, allowing it to request Git history and select folders without opening the app to security risks.
 
-### 🎨 Frontend (Renderer Process)
+### Frontend (Renderer Process)
 *   [`index.html`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/index.html): The root document loaded by the Chromium window, containing the container (`#root`) where React is mounted.
 *   [`src/main.jsx`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/src/main.jsx): The JavaScript entry point that boots up React in strict mode and mounts the app structure.
 *   [`src/App.jsx`](file:///Users/adityarajsrivastava/github-tree/git-visualizer/src/App.jsx): The main component layout where you build the dashboard and wire up the interactive commit graphs.
@@ -38,7 +38,7 @@ Here is a breakdown of the key files and documents in this workspace and how the
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Install Dependencies
 Run the following command at the root of the project to set up the workspace:
@@ -57,3 +57,4 @@ To bundle the frontend assets and pack Electron into a standalone desktop execut
 ```bash
 npm run build
 ```
+its not fully build...
